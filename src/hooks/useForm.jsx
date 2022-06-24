@@ -1,26 +1,25 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
 
 export const useForm = ( initialState = {} ) => {
-  const navigate = useNavigate()
 
   const [form, setForm] = useState( initialState )
 
   const handleChange = ({ target }) => {
+
+    console.log(target);
     setForm((old) => {
       const newValue = { ...old , [target.name]: target.value}
-
-      console.log(newValue);
-
       return newValue
     })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Formulario llenado", form);
-    navigate('/Terminos')
+  const handleChangeTerms = (value) => {
+    setForm( old => {
+      const newValue = { ...old , terms: value }
+      console.log(newValue);
+      return newValue
+    })
   }
 
-  return [ form, handleChange, handleSubmit ]
+  return [ form, handleChange, handleChangeTerms ]
 }

@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { UserContext } from '../UserContext'
 
 const Terminos = () => {
 
   const navigate = useNavigate()
 
-  const [isCheck, setIsCheck] = useState(true)
+  const { handleChangeTerms } = useContext(UserContext)
 
-  const handleChange = () => {
-    setIsCheck(old => !old)
+  const handleChangePage = ({target}) => {
 
-    console.log(isCheck);
-
-    if (isCheck) {
+    if (target.checked) {
+      console.log(target.checked)
+      handleChangeTerms(target.checked)
       setTimeout(() => {
-        setIsCheck(false)
-        navigate('/Confirmacion')
-      }, 150)
+        navigate('/Dados')
+      }, 1000)
     }
   }
 
@@ -35,7 +34,7 @@ const Terminos = () => {
             name="switch-button"
             id="switch-label"
             className="switch-button__checkbox"
-            onChange={ handleChange }
+            onChange={ handleChangePage }
           />
           <label
             htmlFor="switch-label"

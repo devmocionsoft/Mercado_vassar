@@ -1,18 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useForm } from '../hooks/useForm'
+import React, { useContext } from 'react'
+import { useNavigate } from "react-router-dom"
+import { UserContext } from '../UserContext'
+
 
 const Login = () => {
 
-  const [ form, handleChange, handleSubmit ] = useForm({
-    name: '',
-    last_name: '',
-    email: '',
-    cel: '',
-    terms: false
-  })
+  const navigate = useNavigate()
 
-  const { name, last_name, email, cel } = form
+  const { form, handleChange } = useContext(UserContext)
+
+  const { name, last_name, email, cell } = form;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Formulario llenado", form);
+    navigate('/Terminos')
+  }
 
   return (
     <>
@@ -53,11 +56,11 @@ const Login = () => {
 
         <input
           type="number"
-          name='cel'
+          name='cell'
           placeholder='Celular'
           autoComplete='off'
           required
-          value={cel}
+          value={cell}
           onChange={handleChange}
         />
 
