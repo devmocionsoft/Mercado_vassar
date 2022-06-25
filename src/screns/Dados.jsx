@@ -1,20 +1,16 @@
 import Dado from "../componentes/Dado";
-import '../Dados.css'
+import "../Dados.css";
 
 const Dados = () => {
   return (
     <div className="pageDados">
       <div className="DadosContainer">
-        <div className="dado">
-          <Dado />
-        </div>
-        <div className="dado">
-          <Dado />
-        </div>
+        <Dado />
+        <Dado />
       </div>
-      <button >ROLL THE DICE</button>
+      <button>ROLL THE DICE</button>
     </div>
   );
-}
+};
 
 export default Dados;
