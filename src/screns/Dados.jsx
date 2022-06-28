@@ -1,14 +1,25 @@
+import { useState } from "react";
 import Dado from "../componentes/Dado";
 import "../Dados.css";
 
 const Dados = () => {
+
+  const [isThrow, setIsThrow] = useState(false)
+
+  const send = () => {
+    setIsThrow(true)
+    setTimeout(() => {
+      setIsThrow(false)
+    }, 0);
+  }
+
   return (
     <div className="pageDados">
       <div className="DadosContainer">
-        <Dado />
-        <Dado />
+        <Dado isThrow={isThrow}/>
+        <Dado isThrow={isThrow}/>
       </div>
-      <button>ROLL THE DICE</button>
+      <button onClick={send} >ROLL THE DICE</button>
     </div>
   );
 };
