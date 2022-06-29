@@ -29,7 +29,7 @@ export const Login = () => {
           <div className="inputs">
             <input
               type="text"
-              name='name'
+              name='fullName'
               placeholder='NOMBRE Y APELLIDO'
               autoComplete='off'
               value={name}
@@ -49,7 +49,7 @@ export const Login = () => {
           <div className="checkboxes">
             <label>
               <input
-                type="radio"
+                type="checkbox"
                 name='age'
               />
               Soy mayor de 18 años y acepto los términos y condiciones.
@@ -57,7 +57,7 @@ export const Login = () => {
 
             <label>
               <input
-                type="radio"
+                type="checkbox"
                 name='personal-data'
               />
               Autorizo el tratamiento de mis datos personales,

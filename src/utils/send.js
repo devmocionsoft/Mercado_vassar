@@ -3,10 +3,11 @@ export const send = ( Ref, time ) => {
 
   cube.style.transition = '';
   cube.style.transform = `rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+
+  const randomValue = Math.floor((Math.random() * 6) + 1);
+
   setTimeout(() => {
     cube.style.transition = `transform ${time}s`;
-    const randomValue = Math.floor((Math.random() * 6) + 1);
-    console.log(`randomValue: ${randomValue}`);
 
     switch(randomValue) {
       case 1:
@@ -28,5 +29,8 @@ export const send = ( Ref, time ) => {
           cube.style.transform = `rotateX(3600deg) rotateY(1980deg) rotateZ(3600deg)`;
           break;
     };
+
   }, time * 10);
+
+  return randomValue
 }

@@ -2,13 +2,18 @@ import React, { useEffect, useRef } from 'react'
 import { send } from '../utils/send';
 import '../styles/components/Dado.css'
 
-export const Dado = ({ isThrow }) => {
+export const Dado = ({ isThrow, setDado }) => {
   const cubeRef = useRef(),
         time = 2;
 
+  const getValues = async () => {
+    const value = await send( cubeRef, time );
+    // console.log( `value dado: ${ value }` );
+    setDado( value )
+  }
+
   useEffect(() => {
-    if (!isThrow) return
-    send(cubeRef, time)
+    if (isThrow) getValues()
   }, [isThrow])
 
   return (

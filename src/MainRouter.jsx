@@ -9,12 +9,11 @@ import { Login, Dados, Portada, Ganaste, SigueIntentando, Reto } from "./screens
 export default function MainRouter() {
 
   const [ form, handleChange, handleChangeTerms ] = useForm({
-    name: '',
-    last_name: '',
+    fullName: '',
     email: '',
-    cell: '',
+    isOlder: false,
     terms: false,
-    date: new Date()
+    date: new Date
   })
 
   return (
