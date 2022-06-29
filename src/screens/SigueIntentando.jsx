@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../styles/screens/SigueIntentando.css'
 
-export const SigueIntentando = () => (<div className="fondo-SigueIntentando"/>)
+export const SigueIntentando = () => <Link to="/"><div className="fondo-SigueIntentando"/></Link>
