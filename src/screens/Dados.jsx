@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Dado, Button} from "../componentes";
 
 import "../styles/screens/Dados.css";
 
 export const Dados = () => {
+
+  const navigate = useNavigate()
 
   const [isThrow, setIsThrow] = useState(false)
 
@@ -13,6 +16,8 @@ export const Dados = () => {
       setIsThrow(false)
     }, 0);
   }
+
+  const handleNavigate = () => navigate('/reto/12')
 
   return (
     <div className="page">
@@ -30,6 +35,8 @@ export const Dados = () => {
             para lanzar los dados
           </div>
         </Button>
+
+        <button onClick={ handleNavigate }>Continuar</button>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Formulario llenado", form);
-    navigate('/Terminos')
+    navigate('/dados')
   }
 
   return (

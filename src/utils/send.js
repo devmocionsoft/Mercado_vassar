@@ -6,7 +6,7 @@ export const send = ( Ref, time ) => {
   setTimeout(() => {
     cube.style.transition = `transform ${time}s`;
     const randomValue = Math.floor((Math.random() * 6) + 1);
-    console.log(`randomValue: ${randomValue}` );
+    console.log(`randomValue: ${randomValue}`);
 
     switch(randomValue) {
       case 1:

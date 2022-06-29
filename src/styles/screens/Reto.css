@@ -1,38 +1,37 @@
-/* .page {
-  justify-content: space-around;
-}
-
-.container-ganaste {
+.buttons {
   height: 60%;
   width: 80%;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
   margin: 0 auto;
 }
 
-.Ganaste-division {
-  width: 100%;
-  display: flex;
-  justify-content: end;
+.button-container {
+  text-align: start;
 }
 
-h1 {
-  width: 100%;
-}
-
-h3 {
-  width: 50%;
-} */
-
-.fondo-Ganaste {
+.fondo-Reto {
   height: 100vh;
   width: 100%;
   background: #00a9fe;
-  background-image: url('../../assets/GANASTE2.png');
   background-repeat: no-repeat;
   background-origin: center;
   background-position: center;
   background-size: contain;
+  position: relative;
+}
+
+.buttons {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.button {
+  width: 50%;
+  height: 100%;
 }

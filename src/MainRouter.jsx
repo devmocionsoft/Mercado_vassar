@@ -3,7 +3,7 @@ import { BrowserRouter ,Route, Routes } from "react-router-dom";
 import { useForm } from "./hooks/useForm";
 import { UserContext } from "./UserContext";
 
-import { Login, Terminos, Dados, Portada, Ganaste, SigueIntentando, Reto } from "./screens";
+import { Login, Dados, Portada, Ganaste, SigueIntentando, Reto } from "./screens";
 
 
 export default function MainRouter() {
@@ -23,13 +23,11 @@ export default function MainRouter() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Portada />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Dados" element={<Dados />} />
-          <Route path="/Reto/:id" element={<Reto />} />
-          <Route path="/Ganaste" element={<Ganaste />} />
-          <Route path="/SigueIntentando" element={<SigueIntentando />} />
-
-          <Route path="/Terminos" element={<Terminos />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dados" element={<Dados />} />
+          <Route path="/reto/:id" element={<Reto />} />
+          <Route path="/ganaste" element={<Ganaste />} />
+          <Route path="/sigueIntentando" element={<SigueIntentando />} />
         </Routes>
       </BrowserRouter>
 

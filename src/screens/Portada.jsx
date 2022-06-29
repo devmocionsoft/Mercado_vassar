@@ -6,7 +6,7 @@ import '../styles/screens/Portada.css';
 export const Portada = () => {
   const navigate = useNavigate()
 
-  const handleNavigate = () => navigate('/Login')
+  const handleNavigate = () => navigate('/login')
 
   return <div className='fondo-portada' onClick={ handleNavigate } />
 }
