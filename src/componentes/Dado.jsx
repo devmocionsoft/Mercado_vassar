@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import { send } from '../utils/send';
-import './Dado.css'
+import '../styles/components/Dado.css'
 
-const Dado = ({ isThrow }) => {
+export const Dado = ({ isThrow }) => {
   const cubeRef = useRef(),
         time = 2;
 
@@ -63,5 +63,3 @@ const Dado = ({ isThrow }) => {
     </div>
   )
 }
-
-export default Dado

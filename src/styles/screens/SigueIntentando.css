@@ -1,0 +1,23 @@
+.page {
+  justify-content: space-around;
+}
+
+.container-perdiste {
+  height: 60%;
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.Perdiste-division {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+h3 {
+  width: 50%;
+}

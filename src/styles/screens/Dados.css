@@ -1,15 +1,22 @@
 .pageDados {
-  height: 100vh;
+  height: 50%;
   width: 100vw;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .DadosContainer {
   padding: 2vw 0;
   width: 50%;
-  /* height: 25%; */
   display: flex;
   justify-content: space-between;
+}
+
+.button-container {
+  text-align: start;
+}
+
+.button-container > strong {
+  color: var(--color2);
 }

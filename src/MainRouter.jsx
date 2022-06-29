@@ -1,16 +1,12 @@
 import { BrowserRouter ,Route, Routes } from "react-router-dom";
-import App from "./screns/App";
-// import Confirmacion from "./screns/Confirmacion";
-import Login from "./screns/Login";
-import Terminos from "./screns/Terminos";
+
 import { useForm } from "./hooks/useForm";
 import { UserContext } from "./UserContext";
-import Dados from "./screns/Dados";
 
+import { Login, Terminos, Dados, Portada, Ganaste, SigueIntentando, Reto } from "./screens";
 
 
 export default function MainRouter() {
-  console.log("weeee");
 
   const [ form, handleChange, handleChangeTerms ] = useForm({
     name: '',
@@ -26,10 +22,14 @@ export default function MainRouter() {
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<Portada />} />
           <Route path="/Login" element={<Login />} />
-          <Route path="/Terminos" element={<Terminos />} />
           <Route path="/Dados" element={<Dados />} />
+          <Route path="/Reto/:id" element={<Reto />} />
+          <Route path="/Ganaste" element={<Ganaste />} />
+          <Route path="/SigueIntentando" element={<SigueIntentando />} />
+
+          <Route path="/Terminos" element={<Terminos />} />
         </Routes>
       </BrowserRouter>
 
