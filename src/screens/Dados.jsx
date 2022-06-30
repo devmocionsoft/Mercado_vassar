@@ -10,21 +10,20 @@ export const Dados = () => {
 
   const [isThrow, setIsThrow] = useState(false)
 
-  const [dado1, setDado1] = useState(1)
-  const [dado2, setDado2] = useState(1)
+  const [dado1, setDado1] = useState(0)
+  const [dado2, setDado2] = useState(0)
 
   const send = async() => {
     setIsThrow(true)
     await setTimeout(() => {
       setIsThrow(false)
     }, 0);
-    // console.log(`Dado1: ${dado1}`);
   }
 
   useEffect(() => {
     console.log(`Resultado: ${dado1 + dado2}`);
 
-    if ( dado1 === 1 && dado2 === 1) return
+    if ( dado1 === 0 && dado2 === 0) return
 
     setTimeout(() => {
       navigate(`/reto/${dado1 + dado2}`)

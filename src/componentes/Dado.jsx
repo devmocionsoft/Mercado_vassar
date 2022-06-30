@@ -8,7 +8,6 @@ export const Dado = ({ isThrow, setDado }) => {
 
   const getValues = async () => {
     const value = await send( cubeRef, time );
-    // console.log( `value dado: ${ value }` );
     setDado( value )
   }
 
