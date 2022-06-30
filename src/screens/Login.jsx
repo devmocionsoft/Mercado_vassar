@@ -1,3 +1,5 @@
+// import { enviar } from '../firebase/firefebaseConfig';
+
 import React, { useContext } from 'react'
 import { useNavigate } from "react-router-dom"
 import { UserContext } from '../UserContext'
@@ -16,10 +18,11 @@ export const Login = () => {
     e.preventDefault();
     console.log("Formulario llenado", form);
     navigate('/dados')
+    // enviar()
   }
 
   return (
-    <div className='page'>
+    <div className='page fondo'>
 
       <div className="container">
         <h1>Registra tus datos</h1>

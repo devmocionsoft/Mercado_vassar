@@ -1,6 +1,7 @@
 .pageDados {
   height: 50%;
   width: 100vw;
+  background: url('../../assets/JUGUEMOS.png');
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
