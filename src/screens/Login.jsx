@@ -1,4 +1,4 @@
-// import { enviar } from '../firebase/firefebaseConfig';
+// import { enviar } from '../firebase/firebaseConfig';
 
 import React, { useContext } from 'react'
 import { useNavigate } from "react-router-dom"
@@ -17,8 +17,10 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Formulario llenado", form);
+
+    // setDoc(cityRef, { capital: true }, { merge: true });
+    // enviar( form )
     navigate('/dados')
-    // enviar()
   }
 
   return (
