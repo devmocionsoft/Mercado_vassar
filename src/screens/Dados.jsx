@@ -21,7 +21,6 @@ export const Dados = () => {
   }
 
   useEffect(() => {
-    console.log(`Resultado: ${dado1 + dado2}`);
 
     if ( dado1 === 0 && dado2 === 0) return
 
@@ -36,8 +35,18 @@ export const Dados = () => {
     <div className="pageDados">
       <div className="container-dados">
         <div className="DadosContainer">
-          <Dado isThrow={isThrow} setDado={setDado1} cube={'cube_1'} />
-          <Dado isThrow={isThrow} setDado={setDado2} cube={'cube_2'} />
+          <Dado
+            isThrow={isThrow}
+            setDado={setDado1}
+            cube='cube_1'
+            position='DadoContainer-1'
+          />
+          <Dado
+            isThrow={isThrow}
+            setDado={setDado2}
+            cube='cube_2'
+            position='DadoContainer-2'
+          />
         </div>
 
         <Button color='dark' onClick={ send }>
