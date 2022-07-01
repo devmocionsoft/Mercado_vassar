@@ -26,7 +26,7 @@ export const Dados = () => {
 
     setTimeout(() => {
       navigate(`/reto/${dado1 + dado2}`)
-    }, 3000);
+    }, 4000);
 
   }, [ dado1, dado2 ])
 
