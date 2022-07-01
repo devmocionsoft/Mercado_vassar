@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { send } from '../utils/send';
 import '../styles/components/Dado.css'
 
-export const Dado = ({ isThrow, setDado }) => {
+export const Dado = ({ isThrow, setDado, cube }) => {
   const cubeRef = useRef(),
         time = 2;
 
@@ -17,7 +17,7 @@ export const Dado = ({ isThrow, setDado }) => {
 
   return (
     <div className="DadoContainer">
-      <div className="cube" ref={cubeRef}>
+      <div className={`cube ${cube}`} ref={cubeRef}>
           <div className="cube-face front">
               <div className="inside">
                   <span className="dot"></span>

@@ -36,12 +36,12 @@ export const Dados = () => {
     <div className="pageDados">
       <div className="container-dados">
         <div className="DadosContainer">
-          <Dado isThrow={isThrow} setDado={setDado1}/>
-          <Dado isThrow={isThrow} setDado={setDado2}/>
+          <Dado isThrow={isThrow} setDado={setDado1} cube={'cube_1'} />
+          <Dado isThrow={isThrow} setDado={setDado2} cube={'cube_2'} />
         </div>
 
-        <Button color='dark'>
-          <div onClick={ send } className='button-container'>
+        <Button color='dark' onClick={ send }>
+          <div className='button-container' onClick={ send }>
             Haz <strong>CLIC</strong>
             <br />
             para lanzar los dados

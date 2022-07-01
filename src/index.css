@@ -13,6 +13,7 @@
   --size-m: 2.5vw; /* 25% */
   --size-s: 2vw; /* 20% */
   --size-xs: 1.75vw; /* 17.5% */
+
 }
 
 *{
@@ -87,4 +88,14 @@ strong {
 small {
   color: var(--color3);
   font-weight: 100;
+}
+
+@media only screen and (min-width: 1000px) {
+  :root {
+    --size-xl: 5vw; /* 100% */
+    --size-l: 2.5vw; /* 50% */
+    --size-m: 1.25vw; /* 25% */
+    --size-s: 1vw; /* 20% */
+    --size-xs: 0.875vw; /* 17.5% */
+  }
 }
