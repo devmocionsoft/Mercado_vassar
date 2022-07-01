@@ -1,32 +1,42 @@
-// import { enviar } from '../firebase/firebaseConfig';
-
 import React, { useContext } from 'react'
 import { useNavigate } from "react-router-dom"
 import { UserContext } from '../UserContext'
 
 import '../styles/screens/Login.css';
 
+import { db } from '../firebase/firebaseConfig';
+import { collection, addDoc } from 'firebase/firestore';
+
+const usersCollectionRef = collection(db, "users");
+
+const addUser = async (form) => {
+  await addDoc( usersCollectionRef, form)
+}
+
 export const Login = () => {
 
   const navigate = useNavigate()
 
-  const { form, handleChange } = useContext(UserContext)
+  const { form, handleChange, handleChangeIsOlder, handleChangeTerms } = useContext(UserContext)
 
   const { name, email } = form;
+
+  const handleIsOlder = ({ target }) => handleChangeIsOlder(target.checked);
+
+  const handleTerms = ({ target }) => handleChangeTerms(target.checked)
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Formulario llenado", form);
 
-    // setDoc(cityRef, { capital: true }, { merge: true });
-    // enviar( form )
+    addUser( form )
     navigate('/dados')
   }
 
   return (
-    <div className='page fondo'>
+    <div className="page_login">
 
-      <div className="container">
+      <div className="container_login">
         <h1>Registra tus datos</h1>
 
         <form onSubmit={handleSubmit} className='login'>
@@ -55,7 +65,8 @@ export const Login = () => {
             <label>
               <input
                 type="checkbox"
-                name='age'
+                name='isOlder'
+                onChange={ handleIsOlder }
               />
               Soy mayor de 18 años y acepto los términos y condiciones.
             </label>
@@ -63,7 +74,9 @@ export const Login = () => {
             <label>
               <input
                 type="checkbox"
-                name='personal-data'
+                name='terms'
+                required
+                onChange={ handleTerms }
               />
               Autorizo el tratamiento de mis datos personales,
               <br />

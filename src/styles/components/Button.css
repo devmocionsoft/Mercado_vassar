@@ -32,6 +32,9 @@
 .dark {
   background: var(--color5);
   color: var(--color1);
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
 }
 
 .light {

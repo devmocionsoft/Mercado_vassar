@@ -32,9 +32,9 @@ export const Dados = () => {
   }, [ dado1, dado2 ])
 
   return (
-    <div className="page">
 
-      <div className="pageDados">
+    <div className="pageDados">
+      <div className="container-dados">
         <div className="DadosContainer">
           <Dado isThrow={isThrow} setDado={setDado1}/>
           <Dado isThrow={isThrow} setDado={setDado2}/>
@@ -47,7 +47,6 @@ export const Dados = () => {
             para lanzar los dados
           </div>
         </Button>
-
       </div>
     </div>
   );

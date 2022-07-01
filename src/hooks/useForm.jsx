@@ -6,7 +6,6 @@ export const useForm = ( initialState = {} ) => {
 
   const handleChange = ({ target }) => {
 
-    console.log(target);
     setForm((old) => {
       const newValue = { ...old , [target.name]: target.value}
       return newValue
@@ -16,10 +15,16 @@ export const useForm = ( initialState = {} ) => {
   const handleChangeTerms = (value) => {
     setForm( old => {
       const newValue = { ...old , terms: value }
-      console.log(newValue);
       return newValue
     })
   }
 
-  return [ form, handleChange, handleChangeTerms ]
+  const handleChangeIsOlder = ( value ) => {
+    setForm( old => {
+      const newValue = { ...old, isOlder: value }
+      return newValue
+    })
+  }
+
+  return [ form, handleChange, handleChangeTerms, handleChangeIsOlder ]
 }
