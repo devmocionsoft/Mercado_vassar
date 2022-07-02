@@ -46,6 +46,7 @@ export const Login = () => {
               name='fullName'
               placeholder='NOMBRE Y APELLIDO'
               autoComplete='off'
+              required
               value={name}
               onChange={handleChange}
             />
@@ -55,6 +56,7 @@ export const Login = () => {
               name='email'
               placeholder='CORREO'
               autoComplete='off'
+              required
               value={email}
               onChange={handleChange}
             />
