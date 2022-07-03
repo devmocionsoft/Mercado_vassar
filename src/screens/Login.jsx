@@ -5,12 +5,14 @@ import { UserContext } from '../UserContext'
 import '../styles/screens/Login.css';
 
 import { db } from '../firebase/firebaseConfig';
-import { collection, addDoc } from 'firebase/firestore';
+// import { collection, addDoc } from 'firebase/firestore';
+import { doc, setDoc } from "firebase/firestore";
 
-const usersCollectionRef = collection(db, "users");
+// const usersCollectionRef = collection(db, "users");
 
 const addUser = async (form) => {
-  await addDoc( usersCollectionRef, form)
+  // await addDoc( usersCollectionRef, form)
+  await setDoc(doc(db, "users", form.fullName), form);
 }
 
 export const Login = () => {
