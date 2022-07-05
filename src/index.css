@@ -8,11 +8,11 @@
   /*  */
   --size-p: 1200px;
 
-  --size-xl: 10vw; /* 100% */
-  --size-l: 5vw; /* 50% */
-  --size-m: 2.5vw; /* 25% */
-  --size-s: 2vw; /* 20% */
-  --size-xs: 1.75vw; /* 17.5% */
+  --size-xl: 20vw;
+  --size-l: 10vw;
+  --size-m: 5vw;
+  --size-s: 4vw;
+  --size-xs: 3.5vw;
 
 }
 
@@ -89,6 +89,17 @@ small {
   color: var(--color3);
   font-weight: 100;
 }
+
+@media only screen and (min-width: 1000px) {
+  :root {
+    --size-xl: 10vw; /* 100% */
+    --size-l: 5vw; /* 50% */
+    --size-m: 2.5vw; /* 25% */
+    --size-s: 2vw; /* 20% */
+    --size-xs: 1.75vw; /* 17.5% */
+  }
+}
+
 
 @media only screen and (min-width: 1000px) {
   :root {
