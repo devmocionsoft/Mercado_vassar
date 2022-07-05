@@ -19,7 +19,7 @@ export const Login = () => {
 
   const navigate = useNavigate()
 
-  const { form, handleChange, handleChangeIsOlder, handleChangeTerms } = useContext(UserContext)
+  const { form, handleChange, handleChangeIsOlder, handleChangeTerms, handleResetForm } = useContext(UserContext)
 
   const { name, email } = form;
 
@@ -31,6 +31,14 @@ export const Login = () => {
     e.preventDefault();
 
     addUser( form )
+    handleResetForm({
+      fullName: '',
+      email: '',
+      isOlder: false,
+      terms: false,
+      date: new Date
+    })
+    
     navigate('/dados')
   }
 

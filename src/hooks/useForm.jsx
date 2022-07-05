@@ -26,5 +26,7 @@ export const useForm = ( initialState = {} ) => {
     })
   }
 
-  return [ form, handleChange, handleChangeTerms, handleChangeIsOlder ]
+  const handleResetForm = () => setForm( initialState )
+
+  return [ form, handleChange, handleChangeTerms, handleChangeIsOlder, handleResetForm ]
 }

@@ -90,18 +90,18 @@ small {
   font-weight: 100;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 690px) {
   :root {
-    --size-xl: 10vw; /* 100% */
-    --size-l: 5vw; /* 50% */
-    --size-m: 2.5vw; /* 25% */
-    --size-s: 2vw; /* 20% */
-    --size-xs: 1.75vw; /* 17.5% */
+    --size-xl: 12vw;
+    --size-l: 5.5vw;
+    --size-m: 5vw;
+    --size-s: 3vw;
+    --size-xs: 2.5vw;
   }
 }
 
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
   :root {
     --size-xl: 5vw; /* 100% */
     --size-l: 2.5vw; /* 50% */

@@ -8,7 +8,7 @@ import { Login, Dados, Portada, Ganaste, SigueIntentando, Reto } from "./screens
 
 export default function MainRouter() {
 
-  const [ form, handleChange, handleChangeTerms, handleChangeIsOlder ] = useForm({
+  const [ form, handleChange, handleChangeTerms, handleChangeIsOlder, handleResetForm ] = useForm({
     fullName: '',
     email: '',
     isOlder: false,
@@ -17,7 +17,7 @@ export default function MainRouter() {
   })
 
   return (
-    <UserContext.Provider value={{ form, handleChange, handleChangeTerms, handleChangeIsOlder }}>
+    <UserContext.Provider value={{ form, handleChange, handleChangeTerms, handleChangeIsOlder, handleResetForm }}>
 
       <BrowserRouter>
         <Routes>
