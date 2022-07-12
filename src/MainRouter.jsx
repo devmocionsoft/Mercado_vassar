@@ -3,7 +3,7 @@ import { BrowserRouter ,Route, Routes } from "react-router-dom";
 import { useForm } from "./hooks/useForm";
 import { UserContext } from "./UserContext";
 
-import { Login, Dados, Portada, Ganaste, SigueIntentando, Reto } from "./screens";
+import { Login, Dados, Portada, Ganaste, SigueIntentando, Reto, ExportToExcel } from "./screens";
 
 
 export default function MainRouter() {
@@ -27,6 +27,7 @@ export default function MainRouter() {
           <Route path="/reto/:id" element={<Reto />} />
           <Route path="/ganaste" element={<Ganaste />} />
           <Route path="/sigueIntentando" element={<SigueIntentando />} />
+          <Route path="/exportExcel" element={<ExportToExcel />} />
         </Routes>
       </BrowserRouter>
 
